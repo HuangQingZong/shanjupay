@@ -11,10 +11,6 @@ import org.springframework.web.client.RestTemplate;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
 
-/**
- * @author Administrator
- * @version 1.0
- **/
 @SpringBootApplication
 public class MerchantApplicationBootstrap {
 

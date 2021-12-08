@@ -1,7 +1,7 @@
 package com.shanjupay.merchant.api;
 
 import com.shanjupay.common.domain.BusinessException;
-import com.shanjupay.merchant.api.dto.MerchantDTO;
+import com.shanjupay.merchant.dto.MerchantDTO;
 
 
 public interface MerchantService {

@@ -4,11 +4,10 @@ import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.shanjupay.common.util.EncryptUtil;
 import com.shanjupay.merchant.api.MerchantService;
-import com.shanjupay.merchant.api.dto.MerchantDTO;
+import com.shanjupay.merchant.dto.MerchantDTO;
 import org.apache.dubbo.config.annotation.Reference;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 

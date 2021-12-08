@@ -2,7 +2,7 @@ package com.shanjupay.merchant.controller;
 
 import cn.hutool.core.bean.BeanUtil;
 import com.shanjupay.merchant.api.MerchantService;
-import com.shanjupay.merchant.api.dto.MerchantDTO;
+import com.shanjupay.merchant.dto.MerchantDTO;
 import com.shanjupay.merchant.common.util.SecurityUtil;
 import com.shanjupay.merchant.service.FileService;
 import com.shanjupay.merchant.service.SmsService;
@@ -11,7 +11,6 @@ import com.shanjupay.merchant.vo.MerchantDetailVO;
 import com.shanjupay.merchant.vo.MerchantRegisterVO;
 import io.swagger.annotations.*;
 import org.apache.dubbo.config.annotation.Reference;
-import org.aspectj.weaver.ast.Var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
@@ -23,8 +22,8 @@ import java.util.UUID;
 /**
  * 商户
  **/
-@RestController
 @Api(value = "value: 商户平台应用接口", tags = "tags: 商户平台应用接口", description = "description: 商户平台应用接口")
+@RestController
 @RequestMapping("/merchant")
 //url: http://localhost:57010/merchant-application/merchant
 public class MerchantController {

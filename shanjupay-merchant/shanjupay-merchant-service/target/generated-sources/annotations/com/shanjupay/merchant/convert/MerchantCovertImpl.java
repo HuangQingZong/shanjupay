@@ -1,6 +1,6 @@
 package com.shanjupay.merchant.convert;
 
-import com.shanjupay.merchant.api.dto.MerchantDTO;
+import com.shanjupay.merchant.dto.MerchantDTO;
 import com.shanjupay.merchant.entity.Merchant;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,7 +8,7 @@ import javax.annotation.Generated;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2021-12-02T20:40:28+0800",
+    date = "2021-12-05T11:17:22+0800",
     comments = "version: 1.3.0.Final, compiler: javac, environment: Java 1.8.0_302 (Temurin)"
 )
 public class MerchantCovertImpl implements MerchantCovert {

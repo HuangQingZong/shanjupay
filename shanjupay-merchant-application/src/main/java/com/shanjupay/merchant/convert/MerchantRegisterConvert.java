@@ -1,6 +1,6 @@
 package com.shanjupay.merchant.convert;
 
-import com.shanjupay.merchant.api.dto.MerchantDTO;
+import com.shanjupay.merchant.dto.MerchantDTO;
 import com.shanjupay.merchant.vo.MerchantRegisterVO;
 import org.mapstruct.Mapper;
 import org.mapstruct.factory.Mappers;

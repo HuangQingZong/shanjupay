@@ -4,16 +4,12 @@ import cn.hutool.core.bean.BeanUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.shanjupay.common.domain.BusinessException;
 import com.shanjupay.common.domain.CommonErrorCode;
-import com.shanjupay.common.util.PhoneUtil;
-import com.shanjupay.common.util.StringUtil;
 import com.shanjupay.merchant.api.MerchantService;
-import com.shanjupay.merchant.api.dto.MerchantDTO;
-import com.shanjupay.merchant.convert.MerchantCovert;
+import com.shanjupay.merchant.dto.MerchantDTO;
 import com.shanjupay.merchant.entity.Merchant;
+import com.shanjupay.merchant.enums.AuditStatusEnum;
 import com.shanjupay.merchant.mapper.MerchantMapper;
-import org.apache.commons.lang3.StringUtils;
 import org.apache.dubbo.config.annotation.Service;
-import org.aspectj.weaver.ast.Var;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -66,7 +62,7 @@ public class MerchantServiceImpl implements MerchantService {
         Merchant merchantToUpdate = BeanUtil.copyProperties(merchantDTO, Merchant.class);
         merchantToUpdate.setId(merchantOfQuery.getId());
         merchantToUpdate.setMobile(merchantOfQuery.getMobile());//资质申请时不允许修改手机号，还使用数据库中原来的手机号
-        merchantToUpdate.setAuditStatus("1"); //状态改为已申请待审核
+        merchantToUpdate.setAuditStatus(AuditStatusEnum.notAudit.getCode()); //状态改为已申请待审核
         merchantToUpdate.setTenantId(merchantOfQuery.getTenantId());
         //更新商户信息
         merchantMapper.updateById(merchantToUpdate);
